@@ -19,68 +19,76 @@
   <link href="../font-awesome.min.css" rel="stylesheet" />
   <!--<link href="/css/menu-s.css" rel="stylesheet" />-->
   <script src='https://www.google.com/recaptcha/api.js'></script>
-
-  <html>
-
-  <head>
-    <title>Page Title</title>
+  
+    <title>Euvantage Tool for WVD</title>
   </head>
 
-<body>
+<body data-spy="scroll" data-target="page-content">
 
 <!-- Modal -->
-<div class="modal fade" id="registerform" tabindex="-1" role="dialog" aria-labelledby="registerformTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
+<div class="modal fade" id="deployGuide" tabindex="-1" role="dialog" aria-labelledby="registerformTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg " role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #3a1e75; color:#fff">
-        <h5 class="modal-title" id="registerformTitle" >Register</h5>
+        <h5 class="modal-title" id="registerformTitle" >Deploy Guide</h5>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group" action="">
-            <label for="InputEmail">Email address</label>
-            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            
-            <label for="InputPassword">Password</label>
-            <input type="password" class="form-control" id="InputPassword">
-          </div>
-          <div class="form-group">
-            
-            <label for="UserName">User Name</label>
-            <input type="password" class="form-control" id="UserName">
-          </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" pause="hover">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+             
+              <img class="d-block img-fluid" src="assets/images/deoloy guide/azure services.png" alt="First slide">
+              <div class="carousel-caption d-none d-md-block"><h5>Azure services</h5><p>
+                To install the EuVantage Data Collector, you will need the following:
+1. The Azure region where WVD is set up
+2. A Virtual Network with access to the entire WVD setup
+3. The resource group for the above Virtual Network 
 
-          <div class="form-group">
-            
-            <label for="Company">Company Name</label>
-            <input type="text" class="form-control" id="Company">
+              </p></div>
+            </div>
+            <div class="carousel-item">
+             
+              <img class="d-block img-fluid" src="assets/images/deoloy guide/setup page2.png" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block p-0"><h5>Azure services</h5><p>
+                To install the EuVantage Data Collector, you will need the following:
+1. The Azure region where WVD is set up
+2. A Virtual Network with access to the entire WVD setup
+3. The resource group for the above Virtual Network 
+
+              </p></div>
+            </div>
+            <div class="carousel-item">
+             
+              <img class="d-block img-fluid" src="assets/images/deoloy guide/setup page.png" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Azure services</h5>
+                <p>
+                To install the EuVantage Data Collector, you will need the following:
+1. The Azure region where WVD is set up
+2. A Virtual Network with access to the entire WVD setup
+3. The resource group for the above Virtual Network 
+
+              </p></div>
+            </div>
+
           </div>
-          <div class="form-group">
-            
-            <label for="OffcieNumber">OfficeNumber</label>
-            <input type="text" class="form-control" id="OfficeNumber">
-          </div>
-          <div class="form-group">
-            
-            <label for="Location">Location</label>
-            <input type="text" class="form-control" id="Location">
-          </div>
-          
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="CheckBox">
-            <label class="form-check-label" for="CheckBox">Notify about Newsletter</label>
-          </div>
-        </form> 
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon fa fa-arrow-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon fa fa-arrow-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">Download</button>
       </div>
     </div>
   </div>
@@ -97,15 +105,15 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Docs</a>
-          </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#register">Docs</a>
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+          </li> -->
         </ul>
         <div class="d-sm-none d-lg-block">
-          <button class="btn btn-lg btn-primary1" data-toggle="modal" data-target="#registerform">Download</button>
+        <a href="#register"> <button class="btn btn-lg btn-primary1">Register</button></a> 
 
           <button class="btn btn-lg btn-outline-primary1">Support</button>
         </div>
@@ -120,14 +128,14 @@
     <div class="page-content">
       <div class="col-lg-12 row ">
         <div class="col-md-6 p-4" id="product-info">
-          <h1 class="h1 col-10" id="tag-line">Using a State of the Art AIOps Platform
+          <h1 class="h1 col-10" id="tag-line">A State of the Art AIOps Platform for WVD Monitoring  
           </h1>
           <div class="mt-5" id="detail">
             <span class="fa fa-quote-left"></span>
             <h4 class="pl-2">EuVantage® provides end to end visibility of the entire delivery
               infrastructure across all components on a single dashboard.</h4>
           </div>
-          <button class="btn btn-lg btn-primary1 ">TRY NOW</button>
+         <a href="#register"><button class="btn btn-lg btn-primary1 ">TRY NOW</button></a>
 
         </div>
         <div class="col-md-6 backdorp">
@@ -142,41 +150,40 @@
           <div class="card text-center p-3">
             <div class="icon">
               <span class="fa fa-upload"></span>
-              <h5 class="mb-2 mt-4">Esay To Use</h5>
-              <p class="text-muted mb-0 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+              <h5 class="mb-2 mt-4">Azure Infrastructure Provisioned for WVD</h5>
+              <p class="text-muted mb-0 "></p>
 
             </div>
           </div>
           <div class="card text-center p-3">
             <div class="icon">
               <span class="fa fa-server"></span>
-              <h5 class="mb-2 mt-4">SAAS BASED DELIVERY & PRICING</h5>
-              <p class="text-muted mb-0 ">
-                Faster implementation & running with minimal cost and intervention</p>
+              <h5 class="mb-2 mt-4">Cross-domain visibility and metric correlation</h5>
+              <p class="text-muted mb-0 "></p>
 
             </div>
           </div>
           <div class="card text-center p-3">
             <div class="icon">
               <span class="fa fa-hdd"></span>
-              <h5 class="mb-2 mt-4">END TO END VISIBILITY</h5>
-              <p class="text-muted mb-0 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.S</p>
+              <h5 class="mb-2 mt-4">End To End Visibility</h5>
+              <p class="text-muted mb-0 "></p>
 
             </div>
           </div>
           <div class="card text-center p-3">
             <div class="icon">
               <span class="fa fa-brain"></span>
-              <h5 class="mb-2 mt-4">Esay To Use</h5>
-              <p class="text-muted mb-0 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+              <h5 class="mb-2 mt-4">Deep Analytics and Reporting</h5>
+              <p class="text-muted mb-0 "></p>
 
             </div>
           </div>
           <div class="card text-center p-3">
             <div class="icon">
               <span class="fa fa-network-wired"></span>
-              <h5 class="mb-2 mt-4">Esay To Use</h5>
-              <p class="text-muted mb-0 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+              <h5 class="mb-2 mt-4">Azure Infrastructure Provisioned for WVD</h5>
+              <p class="text-muted mb-0 ">                    </p>
 
             </div>
           </div>
@@ -186,7 +193,7 @@
 
         <div class="col-lg-4 mb-5">
           <span class="fa-fa-file"></span>
-          <h5 class="h2 mt-5 mb-4 text-white">why to choose us?</h5>
+          <h5 class="h2 mt-5 mb-4 text-white">Why to choose us?</h5>
           <h6 class="p-text text-white"> EuVantage® is a patented SaaS-based AIOps platform for EUC infrastructures,
             that simplifies the management and delivery of virtualized desktops and applications, whether hosted on
             private or public cloud. Its unique differentiator is its analytics, the cross-domain visibility and
@@ -195,11 +202,11 @@
         
         </div>
         <div class="key-feature text-center">
-          <h2 class="section-title mt-5 mb-3 h2 ">Why do you need ?<h2>
+          <h2 class="section-title mt-5 mb-3 h2 ">Euvantage Tool Offers<h2>
             <ul>
-          <li><img src="assets/images/pageimg/tech-img/HISTORICAL-AND-STATISTICAL-DATA-ANALYSIS.png" alt=""> <p>Enables IT/infrastructure teams to schedule & manage proactive alerts based on various predefined metrics</p></li>
-          <li><img src="assets/images/pageimg/tech-img/QUICK-IDENTIFICATION.png" alt=""> <p>Enables IT/infrastructure teams to schedule & manage proactive alerts based on various predefined metrics</p></li>
-          <li><img src="assets/images/pageimg/tech-img/UNIFICATION-OF-INCIDENTS.png" alt=""><p>Enables IT/infrastructure teams to schedule & manage proactive alerts based on various predefined metrics</p> </li>
+          <li><img src="assets/images/productimg/Peak_concurrency report.png" alt=""> <p>Helps understand the Session load across Host Pools, per VM, and look at the history of sessions. It also helps find usage hotspots and optimize performance.</p></li>
+          <li><img src="assets/images/productimg/ReportsLoginperVM.png" alt=""> <p>Provides a graph that shows how the maximum number of users logged in evolves over time. This provides key insights into usage patterns, and performance</p></li>
+          <li><img src="assets/images/productimg/unifiedDashboard.png" alt=""><p>Provides a single pane of glass that allows administrators to track and analyze the performance of Windows Virtual Desktop infrastructure at a glance.</p> </li>
           
         </ul></div> 
       </div>      
@@ -208,6 +215,7 @@
     <div id="register">
       <section class="bg-light">
         <div class="container">
+<!--           
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="row">
@@ -228,10 +236,59 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 mb-5 mt-5" style="background-color: #3a1e75; color:#fff">
+            
+                  <h5 class="modal-title h3 mt-3 mb-2 " id="registerformTitle" >Register</h5>   
+                <form>
+                  <div class="form-group" action="">
+                    <label for="InputEmail">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                  </div>
+
+                  <div class="form-group">
+                    
+                    <label for="UserName">User Name</label>
+                    <input type="text" class="form-control" id="UserName">
+                  </div>
+        
+                  <div class="form-group">
+                    
+                    <label for="Company">Company Name</label>
+                    <input type="text" class="form-control" id="Company">
+                  </div>
+                  <div class="form-group">
+                    
+                    <label for="OffcieNumber">Official Contact</label>
+                    <input type="text" class="form-control" id="OfficeNumber">
+                  </div>
+                  <div class="form-group">
+                    
+                    <label for="Location">Country</label>
+                    <div class="dropdown">
+                      <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                    </div>
+                  
+                  
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="CheckBox">
+                    <label class="form-check-label" for="CheckBox">Notify about Newsletter</label>
+                  </div>
+                  <button type="button" id="submit" class="btn btn-primary1 mt-3 mb-3 ">Submit</button>
+                </form> 
+              </div>
+                <!-- <div class="col-lg-6">
                     <div class="text-center mt-5 mb-4">
                         <h6 class="">Subscribe To Our Newsletter For New Content, <span class="d-block mt-2">Update And Giveaways!</span></h6>
                     </div>
@@ -241,12 +298,18 @@
                             <button type="submit" class="btn btn-warning">Subscribe</button></input>
                         </form>
                     </div>
-                </div>
+                </div> -->
+            <div class="col-lg-6 m-auto text-center"><h3 class="h3"><span class="mr-4 fa fa-arrow-left"></span>
+              Please Enter your Details to Download the Installation Guide</h3>
+              <button class="btn btn-lg btn-primary1 disabled"  id="guide-disabled">Click here</button>
+              <button class="btn btn-lg btn-primary1 hide" data-toggle="modal" id="guide" data-target="#deployGuide">Click here</button></div>
             </div>
+             
+              </div>
         </div>
     </section>
     </div>
-    <footer class="row">
+    <footer class="">
       <div class="imgbg p-4">
         <div class="footerlogo row"><a class="col-md-6 float-left" href="https://www.euvantage.com"><img
           src="https://www.euvantage.com/wp-content/themes/twentythirteen/images/footer-logo.png"></a>
@@ -295,7 +358,7 @@
       </footer>
     <div class="all-rights">
 
-      <div class="text-center">© 2017 Anunta Tech Inc. All rights reserved. | <a
+      <div class="text-center">© 2020 Anunta Tech Inc. All rights reserved. | <a
           href="https://www.euvantage.com/terms-of-use/">TERMS OF USE</a> | <a
           href="https://www.euvantage.com/privacy-policy/">PRIVACY POLICY</a></div>
 
@@ -313,5 +376,4 @@
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </div>
-
 </html>

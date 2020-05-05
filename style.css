@@ -111,7 +111,7 @@
 
 * body .btn-primary1.disabled,
 * body .btn-outline-primary1.disabled {
-  background-color: #00000030;
+  background-color: rgba(255, 255, 255, 0.459);
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: not-allowed;
@@ -138,6 +138,12 @@
 
 * body .navbar .nav-item .nav-link {
   color: #fff;
+}
+
+* body .navbar .nav-item .nav-link.disabled {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #ffffff60;
 }
 
 * body .navbar .nav-item:hover {
@@ -224,6 +230,10 @@
   margin-top: 2rem;
 }
 
+* body .key-feature img {
+  width: 300px;
+}
+
 * body #feature {
   height: auto;
 }
@@ -237,9 +247,7 @@
   float: left;
   padding: 24px 15px !important;
   max-width: 35%;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
-  min-width: min-content;
+  min-width: 34%;
   margin: 8px 8px 10px 30px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -327,14 +335,26 @@
   color: #9da9bb !important;
 }
 
+* body #register .hide {
+  display: none;
+}
+
+* body #register .btn .disabled {
+  background-color: #5e5e5e;
+}
+
 * body #register h6 {
   color: #9da9bb !important;
   font-size: 1rem !important;
 }
 
-* body #register .subscribe-form input {
+* body #register .form-control {
+  width: 60%;
+}
+
+* body #register .subscribe-form input, * body #register #register input {
   padding: 13px 20px;
-  width: 100%;
+  width: 70%;
   font-size: 17px;
   color: #343a40 !important;
   border: none;
@@ -342,10 +362,28 @@
   padding-right: 180px;
   padding-left: 30px;
   background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 30px;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 3rem;
+}
+
+* body #register .dropdown button {
+  font-size: 17px;
+  color: #343a40 !important;
+  width: 60%;
+  border-radius: 8px;
+  text-align: left;
+  outline: none !important;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  line-height: 2rem;
+  border: none;
+}
+
+* body #register #register input {
+  border-radius: 8px !important;
 }
 
 * body #register .subscribe-form .btn {
@@ -361,7 +399,7 @@
   box-shadow: none !important;
 }
 
-* body #register button {
+* body #register .btn {
   background-color: #ffaa00 !important;
   color: #fff !important;
   letter-spacing: 1px;
@@ -387,6 +425,7 @@
 }
 
 * body .modal-body {
+  height: 80vh;
   background-color: #fff;
 }
 
@@ -419,5 +458,30 @@
 * body .modal-body .form-group input:focus {
   -webkit-box-shadow: 0 0 5px #702bd3;
           box-shadow: 0 0 5px #702bd3;
+}
+
+* body .modal-body .carousel, * body .modal-body .carousel-inner, * body .modal-body .carousel-item {
+  height: 100%;
+}
+
+* body .modal-body .carousel img, * body .modal-body .carousel-inner img, * body .modal-body .carousel-item img {
+  height: auto;
+}
+
+* body .modal-body .carousel-caption {
+  bottom: 0;
+  color: #3a1e75;
+  background-color: #fff;
+}
+
+* body .modal-body .carousel-control-prev span, * body .modal-body .carousel-control-next span {
+  background-color: #663399;
+  color: #fff;
+  opacity: 1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  line-height: 2rem;
+  background-image: none;
 }
 /*# sourceMappingURL=style.css.map */
