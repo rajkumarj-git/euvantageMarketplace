@@ -19,11 +19,13 @@
   <link href="../font-awesome.min.css" rel="stylesheet" />
   <!--<link href="/css/menu-s.css" rel="stylesheet" />-->
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  
+  <script src="node_modules/angular/angular.min.js"></Script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <title>Euvantage Tool for WVD</title>
   </head>
 
-<body data-spy="scroll" data-target="page-content">
+<body   data-spy="scroll" data-target="page-content">
 
 <!-- Modal -->
 <div class="modal fade" id="deployGuide" tabindex="-1" role="dialog" aria-labelledby="registerformTitle" aria-hidden="true">
@@ -41,7 +43,7 @@
             <div class="carousel-item active">
              
               <img class="d-block img-fluid" src="assets/images/deoloy guide/azure services.png" alt="First slide">
-              <div class="carousel-caption d-none d-md-block"><h5>Azure services</h5><p>
+              <div class="carousel-caption d-none d-md-block"><h5 class="h3">Step 1</h5><p>
                 To install the EuVantage Data Collector, you will need the following:
 1. The Azure region where WVD is set up
 2. A Virtual Network with access to the entire WVD setup
@@ -52,24 +54,16 @@
             <div class="carousel-item">
              
               <img class="d-block img-fluid" src="assets/images/deoloy guide/setup page2.png" alt="Second slide">
-              <div class="carousel-caption d-none d-md-block p-0"><h5>Azure services</h5><p>
-                To install the EuVantage Data Collector, you will need the following:
-1. The Azure region where WVD is set up
-2. A Virtual Network with access to the entire WVD setup
-3. The resource group for the above Virtual Network 
-
+              <div class="carousel-caption d-none d-md-block"><h5  class="h3">Step 2</h5><p>
+            Next, navigate to the Virtual Networks page by typing Virtual Networks in the search bar, and clicking on the result
               </p></div>
             </div>
             <div class="carousel-item">
              
               <img class="d-block img-fluid" src="assets/images/deoloy guide/setup page.png" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Azure services</h5>
-                <p>
-                To install the EuVantage Data Collector, you will need the following:
-1. The Azure region where WVD is set up
-2. A Virtual Network with access to the entire WVD setup
-3. The resource group for the above Virtual Network 
+                <h5  class="h3">Step 3</h5>
+                <p>Next, choose the Virtual Network that is connected with your WVD setup, and click it
 
               </p></div>
             </div>
@@ -88,7 +82,7 @@
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-primary">Download</button>
+        <a target="_blank" href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fanuntatech%2FEuVantage%2Fmaster%2FmainTemplate.json"><button type="button" class="btn btn-primary">Install</button></a>
       </div>
     </div>
   </div>
@@ -113,7 +107,7 @@
           </li> -->
         </ul>
         <div class="d-sm-none d-lg-block">
-        <a href="#register"> <button class="btn btn-lg btn-primary1">Register</button></a> 
+        <a href="#register"> <button class="btn btn-lg btn-primary1">Download</button></a> 
 
           <button class="btn btn-lg btn-outline-primary1">Support</button>
         </div>
@@ -128,7 +122,7 @@
     <div class="page-content">
       <div class="col-lg-12 row ">
         <div class="col-md-6 p-4" id="product-info">
-          <h1 class="h1 col-10" id="tag-line">A State of the Art AIOps Platform for WVD Monitoring  
+          <h1 class="h1 col-10" id="tag-line">A State of the Art AI Ops Platform for WVD Monitoring  
           </h1>
           <div class="mt-5" id="detail">
             <span class="fa fa-quote-left"></span>
@@ -214,7 +208,7 @@
     </div>
     <div id="register">
       <section class="bg-light">
-        <div class="container">
+        <div class="container" ng-module="myApp" >
 <!--           
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -237,21 +231,21 @@
                     </div>
                 </div>
             </div> -->
-
-            <div class="row">
+            <div class="row" ng-controller="myController" >
               <div class="col-lg-6 mb-5 mt-5" style="background-color: #3a1e75; color:#fff">
             
-                  <h5 class="modal-title h3 mt-3 mb-2 " id="registerformTitle" >Register</h5>   
+                  <h5 class="modal-title h3 mt-3 mb-2 " id="registerformTitle" >
+                    Register {{name}}</h5>   
                 <form>
                   <div class="form-group" action="">
-                    <label for="InputEmail">Email address</label>
+                    <label for="InputEmail">Email</label>
                     <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
                   </div>
 
                   <div class="form-group">
                     
-                    <label for="UserName">User Name</label>
+                    <label for="UserName">Name</label>
                     <input type="text" class="form-control" id="UserName">
                   </div>
         
@@ -269,23 +263,23 @@
                     
                     <label for="Location">Country</label>
                     <div class="dropdown">
-                      <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown button
+                      <button class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Country <span class="fa fa-caret-down pt-2 pr-2 float-right"></span>
                       </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">India</a>
+                        <a class="dropdown-item" href="#">UK</a>
+                        <a class="dropdown-item" href="#">US</a>
                       </div>
                     </div>
                     </div>
                   
                   
-                  <div class="form-group form-check">
+                  <!-- <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="CheckBox">
                     <label class="form-check-label" for="CheckBox">Notify about Newsletter</label>
-                  </div>
-                  <button type="button" id="submit" class="btn btn-primary1 mt-3 mb-3 ">Submit</button>
+                  </div> -->
+                  <button type="button" id="submit" class="btn btn-primary1  mb-3 ">Submit</button>
                 </form> 
               </div>
                 <!-- <div class="col-lg-6">
@@ -300,9 +294,9 @@
                     </div>
                 </div> -->
             <div class="col-lg-6 m-auto text-center"><h3 class="h3"><span class="mr-4 fa fa-arrow-left"></span>
-              Please Enter your Details to Download the Installation Guide</h3>
-              <button class="btn btn-lg btn-primary1 disabled"  id="guide-disabled">Click here</button>
-              <button class="btn btn-lg btn-primary1 hide" data-toggle="modal" id="guide" data-target="#deployGuide">Click here</button></div>
+              Register here to get EuVantage</h3>
+              <button class="btn btn-lg btn-primary1 disabled"  id="guide-disabled">Proceed</button>
+              <button class="btn btn-lg btn-primary1 hide" data-toggle="modal" id="guide" data-target="#deployGuide">Proceed</button></div>
             </div>
              
               </div>
@@ -368,8 +362,8 @@
   </div>
   </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
